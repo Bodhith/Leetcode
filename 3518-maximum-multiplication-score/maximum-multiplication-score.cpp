@@ -27,7 +27,6 @@ public:
 
     long long int maxScore(vector<int>& a, vector<int>& b) {
         int a_n, b_n;
-        long long int ans;
         int i;
 
         a_n = a.size(), b_n = b.size();
@@ -36,10 +35,6 @@ public:
 
         fill_matrix(a, b, matrix);
 
-        // print_2d_vector(matrix);
-
-        for(ans=-P_MAX, i=a_n-1; i<b_n; i++)    ans = max(ans, matrix[a_n-1][i]);
-
-        return ans;
+        return matrix[a_n-1][b_n-1];
     }
 };
